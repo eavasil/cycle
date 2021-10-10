@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StatisticsServiceTest {
+public class StatisticsServiceTest {
     @Test
     void calculateSum() {
         ru.netology.statistic.StatisticsService service = new ru.netology.statistic.StatisticsService();
@@ -30,7 +30,7 @@ class StatisticsServiceTest {
         // максимальное значение номер месяца
         ru.netology.statistic.StatisticsService service = new ru.netology.statistic.StatisticsService();
         long[] salesPerMonth = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 180;
+        long expected = 8;
         long actual = service.maxSales(salesPerMonth);
         assertEquals(expected, actual);
     }
@@ -57,7 +57,7 @@ class StatisticsServiceTest {
         // среднее значение
         ru.netology.statistic.StatisticsService service = new ru.netology.statistic.StatisticsService();
         long[] salesPerMonth = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 180;
+        long expected = 15;
         long actual = service.findAverage(salesPerMonth);
         assertEquals(expected, actual);
     }
